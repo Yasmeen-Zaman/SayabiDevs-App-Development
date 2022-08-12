@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/editBox"
+        android:layout_width="409dp"
+        android:layout_height="210dp"
+        android:layout_marginTop="4dp"
+        android:background="#ECE3E3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/edtNumber1"
+            android:layout_width="154dp"
+            android:layout_height="41dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="42dp"
+            android:layout_marginStart="42dp"
+            android:layout_marginTop="56dp"
+            android:ems="10"
+            android:inputType="number"
+            android:text="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/edtNumber2"
+            android:layout_width="159dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="35dp"
+            android:layout_marginLeft="28dp"
+            android:layout_marginRight="35dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="55dp"
+            android:layout_toEndOf="@+id/edtNumber1"
+            android:layout_toRightOf="@+id/edtNumber1"
+            android:ems="10"
+            android:text="0"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.459"
+            app:layout_constraintStart_toEndOf="@+id/edtNumber1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/edtResult"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/edtNumber1"
+            android:layout_marginBottom="25dp"
+            android:layout_marginEnd="101dp"
+            android:layout_marginLeft="102dp"
+            android:layout_marginRight="101dp"
+            android:layout_marginStart="102dp"
+            android:layout_marginTop="34dp"
+            android:ems="10"
+            android:enabled="false"
+            android:text="0"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtNumber1" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/functionsBox"
+        android:layout_width="410dp"
+        android:layout_height="468dp"
+        android:background="#3EF4F6F6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editBox"
+        app:layout_constraintVertical_bias="1.0">
+
+        <Button
+            android:id="@+id/add"
+            android:layout_width="75dp"
+            android:layout_height="56dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="77dp"
+            android:layout_marginStart="77dp"
+            android:layout_marginTop="60dp"
+            android:text="+"
+            android:onClick="addition"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/subtract"
+            android:layout_width="75dp"
+            android:layout_height="56dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="74dp"
+            android:layout_marginLeft="117dp"
+            android:layout_marginRight="74dp"
+            android:layout_marginStart="117dp"
+            android:layout_marginTop="59dp"
+            android:layout_toEndOf="@+id/add"
+            android:layout_toRightOf="@+id/add"
+            android:text="-"
+            android:onClick="subtraction"
+            app:layout_constraintStart_toEndOf="@+id/add" />
+
+        <Button
+            android:id="@+id/multiply"
+            android:layout_width="75dp"
+            android:layout_height="56dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/add"
+            android:layout_marginLeft="77dp"
+            android:layout_marginStart="77dp"
+            android:layout_marginTop="63dp"
+            android:text="x"
+            android:onClick="multiplication"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/add" />
+
+        <Button
+            android:id="@+id/divide"
+            android:layout_width="75dp"
+            android:layout_height="56dp"
+            android:layout_below="@+id/subtract"
+            android:layout_marginLeft="119dp"
+            android:layout_marginStart="119dp"
+            android:layout_marginTop="64dp"
+            android:layout_toEndOf="@+id/multiply"
+            android:layout_toRightOf="@+id/multiply"
+            android:text="/"
+            android:onClick="division"
+            app:layout_constraintStart_toEndOf="@+id/multiply"
+            app:layout_constraintTop_toBottomOf="@+id/subtract" />
+
+        <Button
+            android:id="@+id/Reset"
+            android:layout_width="75dp"
+            android:layout_height="56dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/subtract"
+            android:layout_marginEnd="154dp"
+            android:layout_marginLeft="162dp"
+            android:layout_marginRight="154dp"
+            android:layout_marginStart="162dp"
+            android:layout_marginTop="5dp"
+            android:text="Reset"
+            android:onClick="reset"/>
+
+    </RelativeLayout>
+
+
+</LinearLayout>
