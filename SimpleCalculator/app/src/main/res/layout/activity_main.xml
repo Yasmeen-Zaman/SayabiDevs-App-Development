@@ -7,6 +7,7 @@
     tools:context=".MainActivity"
     android:layout_gravity="center"
     android:gravity="center"
+    android:background="#B2B9EDE8"
     android:orientation="vertical">
 
     <RelativeLayout
@@ -14,7 +15,6 @@
         android:layout_width="409dp"
         android:layout_height="210dp"
         android:layout_marginTop="4dp"
-        android:background="#ECE3E3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -88,8 +88,7 @@
     <RelativeLayout
         android:id="@+id/functionsBox"
         android:layout_width="410dp"
-        android:layout_height="468dp"
-        android:background="#3EF4F6F6"
+        android:layout_height="310dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -107,8 +106,8 @@
             android:layout_marginLeft="77dp"
             android:layout_marginStart="77dp"
             android:layout_marginTop="60dp"
-            android:text="+"
             android:onClick="addition"
+            android:text="+"
             app:layout_constraintStart_toStartOf="parent" />
 
         <Button
@@ -125,8 +124,8 @@
             android:layout_marginTop="59dp"
             android:layout_toEndOf="@+id/add"
             android:layout_toRightOf="@+id/add"
-            android:text="-"
             android:onClick="subtraction"
+            android:text="-"
             app:layout_constraintStart_toEndOf="@+id/add" />
 
         <Button
@@ -139,8 +138,8 @@
             android:layout_marginLeft="77dp"
             android:layout_marginStart="77dp"
             android:layout_marginTop="63dp"
-            android:text="x"
             android:onClick="multiplication"
+            android:text="x"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/add" />
 
@@ -154,8 +153,8 @@
             android:layout_marginTop="64dp"
             android:layout_toEndOf="@+id/multiply"
             android:layout_toRightOf="@+id/multiply"
-            android:text="/"
             android:onClick="division"
+            android:text="/"
             app:layout_constraintStart_toEndOf="@+id/multiply"
             app:layout_constraintTop_toBottomOf="@+id/subtract" />
 
@@ -173,8 +172,8 @@
             android:layout_marginRight="154dp"
             android:layout_marginStart="162dp"
             android:layout_marginTop="5dp"
-            android:text="Reset"
-            android:onClick="reset"/>
+            android:onClick="reset"
+            android:text="Reset" />
 
     </RelativeLayout>
 
