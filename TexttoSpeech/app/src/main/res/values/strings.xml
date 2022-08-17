@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Text to Speech</string>
+    <string name="hint_txt">Enter text here...</string>
 </resources>
